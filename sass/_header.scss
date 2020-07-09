@@ -1,0 +1,73 @@
+.header{
+    grid-column: full-start/col-end 6; //6 for header and 2 for realtor = 8
+    background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8rem;
+    padding-top: 4rem;
+
+    display: grid;
+    //grid-template-rows: 1fr min-content 6rem 1fr;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    //grid-template-columns: max-content; //so it wont occupy whole header div space
+    grid-template-columns: minmax((min-content, max-content));
+    grid-row-gap: 1.5rem;
+    justify-content: center; //center whole div
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1/-1; //header ocupy whole screen
+        
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+        
+    }
+
+    &__logo {
+        height: 3rem;
+        justify-self: center; //center logo
+    }
+
+    &__btn {
+        align-self: start; //so button wont occupy whole row
+        justify-self: start;
+    }
+
+    &__seenon-text {
+        display: grid; //set text to grid
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 15px;
+        align-items: center; //align text with lines
+
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor; //takes color of the one in color property
+
+        }
+    }
+
+    &__seenon-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+        justify-items: center; //centers each logo in their grid cell
+        align-items: center;
+        
+
+        img {
+            //height: 2.5rem;
+            max-height: 2.5rem; //height can be 2.5rem or less
+            max-width: 100%;
+            filter: brightness(70%); //darken image a bit
+
+        }
+    }
+}
+

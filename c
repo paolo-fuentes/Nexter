@@ -1,0 +1,17 @@
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+http.sslbackend=openssl
+diff.astextplain.textconv=astextplain
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+gui.recentrepo=C:/Users/Paolo Fuentes/python
+core.editor="C:\Users\Paolo Fuentes\AppData\Local\Programs\Microsoft VS Code\Code.exe" --wait
+user.email=paolo.fuentes@obf.ateneo.edu
+user.name=Paolo
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
